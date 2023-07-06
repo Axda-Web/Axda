@@ -6,6 +6,7 @@ import Head from "next/head";
 //   variable: "--font-mont",
 // });
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function App({ Component, pageProps }) {
   return (
@@ -18,6 +19,7 @@ export default function App({ Component, pageProps }) {
       <main className="bg-light w-full min-h-screen">
         <Navbar />
         <Component {...pageProps} />
+        <Footer />
       </main>
     </>
   );
