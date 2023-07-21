@@ -43,26 +43,6 @@ const Education = () => {
           ref={lineRef}
         />
         <ul className="space-y-8 w-full flex flex-col items-start justify-between ml-4">
-          {/* --------------------------------------------------------------
-
-EDUCATION:
-
-Bachelor Of Science In Computer Science
-2016-2020 | Massachusetts Institute Of Technology (MIT)
-Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
-Intelligence.
-
-Master Of Computer Science
-2020-2022 | Stanford University
-Completed a master's project on deep learning, developing a new neural network architecture for natural 
-language understanding.
-
-Online Coursework
-2016-2020 | Coursera And EdX
-Completed coursework in advanced topics such as Reinforcement Learning, Computer Vision, and Machine 
-Learning Engineering.
-
--------------------------------------------------------------- */}
           <Details
             type="Bachelor Of Science In Computer Science"
             time="2016-2020"
