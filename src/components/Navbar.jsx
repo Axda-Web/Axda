@@ -2,8 +2,10 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { TwitterIcon, LinkedInIcon, GithubIcon } from "./Icons";
 import { motion } from "framer-motion";
+import useThemeSwitcher from "./hooks/useThemeSwitcher";
 
 import Logo from "./Logo";
+import { SunIcon, MoonIcon } from "./Icons";
 
 const navLinks = [
   {
@@ -34,7 +36,7 @@ const CustomLink = ({ url, title }) => {
     <Link href={url} className="relative group">
       {title}
       <span
-        className={`h-px inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
+        className={`h-px inline-block bg-dark dark:bg-light absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
           asPath === url ? "w-full" : "w-0"
         }`}
       >
@@ -45,8 +47,9 @@ const CustomLink = ({ url, title }) => {
 };
 
 const Navbar = () => {
+  const [mode, setMode] = useThemeSwitcher();
   return (
-    <header className="w-full px-32 py-8 font-medium flex justify-between">
+    <header className="w-full px-32 py-8 font-medium flex justify-between dark:text-light">
       <nav className="space-x-8">
         {navLinks.map(({ id, url, title }) => (
           <CustomLink key={id} url={url} title={title} />
@@ -80,6 +83,18 @@ const Navbar = () => {
         >
           <GithubIcon />
         </motion.a>
+        <button
+          onClick={() => setMode(mode === "light" ? "dark" : "light")}
+          className={`ml-3 flex items-center justify-center rounded-full p-1 ${
+            mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
+          }`}
+        >
+          {mode === "dark" ? (
+            <SunIcon className="fill-dark" />
+          ) : (
+            <MoonIcon className="fill-dark" />
+          )}
+        </button>
       </nav>
       <div className="absolute left-2/4 top-2 -translate-x-1/2">
         <Logo />
