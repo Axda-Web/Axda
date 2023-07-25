@@ -47,11 +47,10 @@ const Experience = () => {
       <h2 className="font-bold text-8xl mb-32 w-full text-center">
         Experience
       </h2>
-      <div className="w-9/12 mx-auto relative">
+      <div ref={lineRef} className="w-9/12 mx-auto relative">
         <motion.div
           style={{ scaleY: scrollYProgress }}
           className="absolute w-1 left-9 top-0 h-full bg-dark origin-top dark:bg-light"
-          ref={lineRef}
         />
         <ul className="space-y-8 w-full flex flex-col items-start justify-between ml-4">
           <Details
