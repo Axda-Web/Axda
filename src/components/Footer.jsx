@@ -3,14 +3,11 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="w-full border-t-2 border-solid border-dark font-medium text-lg dark:text-light dark:border-light sm:text-base">
+    <footer className="w-full border-t-2 border-solid border-light text-light font-medium text-lg sm:text-base bg-dark">
       <Layout className="py-8 flex items-center justify-between lg:flex-col lg:py-6 lg:gap-y-6">
         <span>{new Date().getFullYear()} &copy; All rights reserved.</span>
         <div>
-          Build with{" "}
-          <span className="text-primary dark:text-primaryDark text-2xl px">
-            &#9825;
-          </span>{" "}
+          Build with <span className="text-primary text-2xl px">&#9825;</span>{" "}
           by &nbsp;
           <Link
             className="underline underline-offset-2"

@@ -68,7 +68,7 @@ const Article = ({ img, title, date, link }) => {
       className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light dark:bg-dark text-dark dark:text-light first:mt-0 border border-solid border-dark dark:border-light border-r-4 border-b-4 sm:flex-col sm:gap-y-4"
     >
       <MovingImg title={title} img={img} link={link} />
-      <span className="text-primary dark:text-primaryDark font-semibold pl-4 sm:self-start sm:pl-0 xs:text-sm">
+      <span className="text-primary font-semibold pl-4 sm:self-start sm:pl-0 xs:text-sm">
         {date}
       </span>
     </motion.li>
@@ -100,9 +100,7 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
         </h2>
       </Link>
       <p className="text-sm mb-2">{summary}</p>
-      <span className="text-primary dark:text-primaryDark font-semibold">
-        {time}
-      </span>
+      <span className="text-primary font-semibold">{time}</span>
     </li>
   );
 };

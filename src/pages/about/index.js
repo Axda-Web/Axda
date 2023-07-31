@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Layout from "../../components/Layout";
 import AnimatedText from "../../components/AnimatedText";
-import profilePic from "../../../public/images/profile/developer-pic-2.jpg";
+import profilePic from "../../../public/images/profile/about-pic.jpg";
 import { useSpring, useMotionValue, useInView } from "framer-motion";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
@@ -52,9 +52,8 @@ const index = () => {
                 Biography
               </h2>
               <p className="font-medium">
-                Hi, I&apos;m CodeBucks, a web developer and UI/UX designer with
-                a passion for creating beautiful, functional, and user-centered
-                digital experiences. With 4 years of experience in the field. I
+                Hi! I&apos;m Alyx, a web developer with a passion for creating
+                beautiful, functional, and user-centered digital experiences. I
                 am always looking for new and innovative ways to bring my
                 clients&apos; visions to life.
               </p>
@@ -63,12 +62,15 @@ const index = () => {
                 pretty – it&apos;s about solving problems and creating
                 intuitive, enjoyable experiences for users.{" "}
               </p>
-              <p className="font-medium">
+              <p className="font-medium mb-4">
                 Whether I&apos;m working on a website, mobile app, or other
                 digital product, I bring my commitment to design excellence and
-                user-centered thinking to every project I work on. I look
-                forward to the opportunity to bring my skills and passion to
-                your next project.
+                user-centered thinking to every project. I look forward to the
+                opportunity to bring my skills and passion to your next project.
+              </p>
+              <p className="font-medium">
+                I look forward to the opportunity to bring my skills and passion
+                to your next project.
               </p>
             </div>
             <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark dark:border-light bg-light dark:bg-dark p-8 xl:col-span-4 md:order-1 md:col-span-8">
@@ -83,7 +85,7 @@ const index = () => {
             </div>
             <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
               <div className="flex flex-col items-end justify-center xl:items-center">
-                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
+                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl text-primary">
                   <AnimatedNumbers value={50} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
@@ -91,7 +93,7 @@ const index = () => {
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-center xl:items-center">
-                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
+                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl text-primary">
                   <AnimatedNumbers value={40} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
@@ -99,7 +101,7 @@ const index = () => {
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-center xl:items-center">
-                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
+                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl text-primary">
                   <AnimatedNumbers value={2} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
