@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { TwitterIcon, LinkedInIcon, GithubIcon } from "./Icons";
+import { LinkedInIcon, GithubIcon, FrontendMentorIcon } from "./Icons";
 import { motion } from "framer-motion";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
 
@@ -24,11 +24,11 @@ const navLinks = [
     url: "/projects",
     title: "Projects",
   },
-  {
-    id: 4,
-    url: "/articles",
-    title: "Articles",
-  },
+  // {
+  //   id: 4,
+  //   url: "/blog",
+  //   title: "Blog",
+  // },
 ];
 
 const CustomLink = ({ url, title, className = "" }) => {
@@ -109,16 +109,7 @@ const Navbar = () => {
         </nav>
         <nav className="flex justify-between items-center gap-x-6">
           <motion.a
-            href="/"
-            target="_blank"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            className="w-6"
-          >
-            <TwitterIcon />
-          </motion.a>
-          <motion.a
-            href="/"
+            href="https://www.linkedin.com/in/alyx-darenne/"
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -127,7 +118,7 @@ const Navbar = () => {
             <LinkedInIcon />
           </motion.a>
           <motion.a
-            href="/"
+            href="https://github.com/Axda-Web"
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -135,9 +126,18 @@ const Navbar = () => {
           >
             <GithubIcon />
           </motion.a>
+          <motion.a
+            href="https://www.frontendmentor.io/profile/Axda-Web"
+            target="_blank"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            className="w-6"
+          >
+            <FrontendMentorIcon />
+          </motion.a>
           <button
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            className={`ml-3 flex items-center justify-center rounded-full p-1 ${
+            className={`ml-12 flex items-center justify-center rounded-full p-1 ${
               mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
             }`}
           >
@@ -167,16 +167,7 @@ const Navbar = () => {
           </nav>
           <nav className="flex justify-between items-center gap-x-6">
             <motion.a
-              href="/"
-              target="_blank"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              className="w-6"
-            >
-              <TwitterIcon />
-            </motion.a>
-            <motion.a
-              href="/"
+              href="https://www.linkedin.com/in/alyx-darenne/"
               target="_blank"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
@@ -185,13 +176,22 @@ const Navbar = () => {
               <LinkedInIcon />
             </motion.a>
             <motion.a
-              href="/"
+              href="https://github.com/Axda-Web"
               target="_blank"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
               className="w-6 bg-light dark:bg-dark rounded-full"
             >
               <GithubIcon />
+            </motion.a>
+            <motion.a
+              href="https://www.frontendmentor.io/profile/Axda-Web"
+              target="_blank"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.9 }}
+              className="w-6"
+            >
+              <FrontendMentorIcon />
             </motion.a>
           </nav>
           <button
