@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   darkMode: "class",
   theme: {
     extend: {
@@ -10,7 +14,7 @@ module.exports = {
       colors: {
         dark: "#1b1b1b",
         light: "#f5f5f5",
-        primary: "#0A7EA4", // 240,86,199
+        primary: "#0A7EA4",
       },
       animation: {
         "spin-slow": "spin 10s linear infinite",
