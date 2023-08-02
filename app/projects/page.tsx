@@ -2,80 +2,11 @@ import Layout from "../components/layout";
 import AnimatedText from "../components/animated-text";
 import Link from "next/link";
 import { GithubIcon } from "../components/icons/Icons";
-import projectNewsletterImg from "../../public/images/projects/newsletter-project-thumbnail.jpg";
-import projectDailyQuotesImg from "../../public/images/projects/daily_quotes-project-thumbnail.jpg";
-import projectTodoListImg from "../../public/images/projects/todo_list-project-thumbnail.jpg";
-import projectMyTravelJournalImg from "../../public/images/projects/my_travel_journal-project-thumbnail.jpg";
-import projectFisheyeImg from "../../public/images/projects/fisheye-project-thumbnail.jpg";
-import projectOhmyfoodImg from "../../public/images/projects/ohmyfood-project-thumbnail.jpg";
 import TransitionEffect from "../components/transition-effect";
 import { Project, Projects } from "@/types";
 import AnimatedImage from "../components/animated-image";
 
 import projectService from "../../services/projects";
-
-const projectData: Projects = [
-  {
-    id: 1,
-    title: "Newsletter sign-up form",
-    description:
-      "The challenge was to build out a newsletter form and get it looking as close to the design as possible.",
-    img: projectNewsletterImg as unknown as string,
-    link: "https://fe-newsletter-bret.vercel.app/",
-    github: "https://github.com/Axda-Web/fe-newsletter",
-    featured: true,
-  },
-  {
-    id: 2,
-    title: "Daily Quotes App",
-    description:
-      "The challenge was to build out an App that displays random motivational quotes with changing background.",
-    img: projectDailyQuotesImg as unknown as string,
-    link: "https://daily-quotes-beryl.vercel.app/",
-    github: "https://github.com/Axda-Web/dailyQuotes",
-    featured: false,
-  },
-  {
-    id: 3,
-    title: "Todo List App",
-    description:
-      "The challenge was to build out a Todo List App allowing users to add, edit, delete and archive taks to do.",
-    img: projectTodoListImg as unknown as string,
-    link: "https://to-do-app-sooty-ten.vercel.app",
-    github: "https://github.com/Axda-Web/toDoApp",
-    featured: false,
-  },
-  {
-    id: 4,
-    title: "My Travel Journal Blog",
-    description:
-      "The challenge was to build out a blog page displaying a list of blog posts.",
-    img: projectMyTravelJournalImg as unknown as string,
-    link: "https://my-travel-journal-smoky.vercel.app",
-    github: "https://github.com/Axda-Web/myTravelJournal",
-    featured: true,
-  },
-  {
-    id: 5,
-    title: "Fisheye App",
-    description:
-      "The challenge was to build out a Fiverr like platform for photographers.",
-    img: projectFisheyeImg as unknown as string,
-    link: "https://fisheye-phi.vercel.app",
-    github: "https://github.com/Axda-Web/fisheye",
-    featured: false,
-  },
-  {
-    id: 6,
-    title: "ohmyfood",
-    description:
-      "The challenge was to build out a website showing a list of restaurants and their menus.",
-    img: projectOhmyfoodImg as unknown as string,
-    link: "https://oh-my-food-kappa.vercel.app",
-    github: "https://github.com/Axda-Web/ohMyFood",
-    featured: false,
-  },
-];
 
 const Project = ({
   title,
@@ -184,6 +115,7 @@ const FeaturedProject = ({
 };
 
 const ProjectsPage = async () => {
+  const projects = await projectService.getAll();
   return (
     <>
       <TransitionEffect />
@@ -194,7 +126,7 @@ const ProjectsPage = async () => {
             className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-16 sm:gap-x-0">
-            {projectData.map(
+            {projects.map(
               ({ id, title, description, img, link, github, featured }) => {
                 if (featured) {
                   return (
@@ -202,7 +134,7 @@ const ProjectsPage = async () => {
                       <FeaturedProject
                         title={title}
                         description={description}
-                        img={img}
+                        img={`/images/projects/${img}-project-thumbnail.jpg`}
                         link={link}
                         github={github}
                       />
@@ -214,7 +146,7 @@ const ProjectsPage = async () => {
                   <div className="col-span-6 sm:col-span-12" key={id}>
                     <Project
                       title={title}
-                      img={img}
+                      img={`/images/projects/${img}-project-thumbnail.jpg`}
                       link={link}
                       github={github}
                     />

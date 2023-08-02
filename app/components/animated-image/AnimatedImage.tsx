@@ -28,6 +28,8 @@ const AnimatedImage = ({
 }: AnimatedImageProps) => {
   return (
     <FramerImage
+      width={0}
+      height={0}
       src={src}
       alt={alt}
       className={classes}
