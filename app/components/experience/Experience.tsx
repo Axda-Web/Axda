@@ -1,3 +1,5 @@
+"use client";
+
 import { useRef } from "react";
 import { useScroll, motion } from "framer-motion";
 import { Experience, Experiences } from "@/types";

@@ -1,10 +1,6 @@
-"use client";
-
 import Layout from "../components/layout";
 import AnimatedText from "../components/animated-text";
 import Link from "next/link";
-import Image from "next/image";
-import { motion } from "framer-motion";
 import { GithubIcon } from "../components/icons/Icons";
 import projectNewsletterImg from "../../public/images/projects/newsletter-project-thumbnail.jpg";
 import projectDailyQuotesImg from "../../public/images/projects/daily_quotes-project-thumbnail.jpg";
@@ -14,8 +10,9 @@ import projectFisheyeImg from "../../public/images/projects/fisheye-project-thum
 import projectOhmyfoodImg from "../../public/images/projects/ohmyfood-project-thumbnail.jpg";
 import TransitionEffect from "../components/transition-effect";
 import { Project, Projects } from "@/types";
+import AnimatedImage from "../components/animated-image";
 
-const FramerImage = motion(Image);
+import projectService from "../../services/projects";
 
 const projectData: Projects = [
   {
@@ -94,13 +91,10 @@ const Project = ({
         href={link}
         target="_blank"
       >
-        <FramerImage
+        <AnimatedImage
           src={img}
           alt={title}
-          className="w-full h-auto"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.2 }}
-          priority
+          classes="w-full h-auto"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
         />
       </Link>
@@ -149,13 +143,10 @@ const FeaturedProject = ({
         href={link}
         target="_blank"
       >
-        <FramerImage
+        <AnimatedImage
           src={img}
           alt={title}
-          className="w-full h-auto"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.2 }}
-          priority
+          classes="w-full h-auto"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
         />
       </Link>
@@ -192,7 +183,7 @@ const FeaturedProject = ({
   );
 };
 
-const ProjectsPage = () => {
+const ProjectsPage = async () => {
   return (
     <>
       <TransitionEffect />
