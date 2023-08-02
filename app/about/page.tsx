@@ -1,48 +1,28 @@
-"use client";
-
-import { useRef, useEffect, MutableRefObject } from "react";
 import Image from "next/image";
 import Layout from "../components/layout";
 import AnimatedText from "../components/animated-text";
 import profilePic from "../../public/images/profile/about-pic.jpg";
-import { useSpring, useMotionValue, useInView } from "framer-motion";
 import Skills from "../components/skills";
 import Experience from "../components/experience";
 import Education from "../components/education";
 import TransitionEffect from "../components/transition-effect";
 
-type AnimatedNumbersProps = {
-  value: number;
-};
-const AnimatedNumbers = ({ value }: AnimatedNumbersProps) => {
-  const ref = useRef();
-  const motionValue = useMotionValue(0);
-  const springValue = useSpring(motionValue, { duration: 3000 });
+import AnimatedNumbers from "../components/animated-numbers/AnimatedNumbers";
 
-  // @ts-ignore
-  const isInView = useInView(ref, {
-    once: true,
-  });
+import experienceService from "../../services/experiences";
+import educationService from "../../services/educations";
+import skillsService from "../../services/skills";
 
-  useEffect(() => {
-    if (isInView) {
-      motionValue.set(value);
-    }
-  }, [isInView, value, motionValue]);
+const AboutPage = async () => {
+  const experiencesData = experienceService.getAll();
+  const educationsData = educationService.getAll();
+  const skillsData = skillsService.getAll();
 
-  useEffect(() => {
-    springValue.on("change", (latest) => {
-      if (ref.current && latest.toFixed(0) <= value) {
-        // @ts-ignore
-        ref.current.textContent = latest.toFixed(0);
-      }
-    });
-  }, [springValue, value]);
-
-  // @ts-ignore
-  return <span ref={ref}></span>;
-};
-const AboutPage = () => {
+  const [experiences, educations, skills] = await Promise.all([
+    experiencesData,
+    educationsData,
+    skillsData,
+  ]);
   return (
     <>
       <TransitionEffect />
@@ -116,9 +96,9 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
-          <Skills />
-          <Experience />
-          <Education />
+          <Skills skills={skills} />
+          <Experience experiences={experiences} />
+          <Education educations={educations} />
         </Layout>
       </main>
     </>
