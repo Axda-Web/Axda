@@ -2,8 +2,8 @@ import { z } from "zod";
 import {
   ProjectSchema,
   ProjectsSchema,
-  BlogSchema,
-  BlogsSchema,
+  PostSchema,
+  PostsSchema,
   EducationSchema,
   EducationsSchema,
   ExperienceSchema,
@@ -15,8 +15,8 @@ import {
 type Project = z.infer<typeof ProjectSchema>;
 type Projects = z.infer<typeof ProjectsSchema>;
 
-type Blog = z.infer<typeof BlogSchema>;
-type Blogs = z.infer<typeof BlogsSchema>;
+type Post = z.infer<typeof PostSchema>;
+type Posts = z.infer<typeof PostsSchema>;
 
 type Education = z.infer<typeof EducationSchema>;
 type Educations = z.infer<typeof EducationsSchema>;

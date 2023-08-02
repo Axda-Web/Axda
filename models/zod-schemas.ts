@@ -12,7 +12,7 @@ export const ProjectSchema = z.object({
 
 export const ProjectsSchema = z.array(ProjectSchema);
 
-export const BlogSchema = z.object({
+export const PostSchema = z.object({
   id: z.number(),
   title: z.string(),
   summary: z.string(),
@@ -24,7 +24,7 @@ export const BlogSchema = z.object({
   featured: z.boolean(),
 });
 
-export const BlogsSchema = z.array(BlogSchema);
+export const PostsSchema = z.array(PostSchema);
 
 export const EducationSchema = z.object({
   id: z.number(),
