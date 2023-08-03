@@ -28,7 +28,7 @@ type SkillsProps = {
 
 const Skills = ({ skills }: SkillsProps) => {
   return (
-    <>
+    <div>
       <h2 className="font-bold text-8xl mt-64 w-full text-center md:text-6xl xs:text-4xl md:mt-32 mb-10">
         Skills
       </h2>
@@ -43,7 +43,7 @@ const Skills = ({ skills }: SkillsProps) => {
           <Skill key={skill.id} {...skill} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 export default Skills;

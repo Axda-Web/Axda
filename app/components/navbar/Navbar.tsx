@@ -6,7 +6,6 @@ import { useRouter } from "next/navigation";
 import { LinkedInIcon, GithubIcon, FrontendMentorIcon } from "../icons/Icons";
 import { motion } from "framer-motion";
 import useThemeSwitcher from "../hooks/useThemeSwitcher";
-
 import Logo from "../logo";
 import { SunIcon, MoonIcon } from "../icons/Icons";
 
@@ -118,7 +117,7 @@ const Navbar = () => {
           }`}
         ></span>
       </button>
-      <div className="w-full flex items-center justify-between lg:hidden">
+      <div className="w-full flex items-center justify-between lg:hidden max-w-[1800px] mx-auto">
         <nav className="space-x-8">
           {navLinks.map(({ id, url, title }: NavLink) => (
             <CustomLink key={id} url={url} title={title} />

@@ -6,12 +6,17 @@ import Skills from "../components/skills";
 import Experience from "../components/experience";
 import Education from "../components/education";
 import TransitionEffect from "../components/transition-effect";
-
 import AnimatedNumbers from "../components/animated-numbers/AnimatedNumbers";
-
 import experienceService from "../../services/experiences";
 import educationService from "../../services/educations";
 import skillsService from "../../services/skills";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Alyx DARENNE | About me",
+  description:
+    "Get to know the person behind the code! Welcome to my 'About Me' page, where you'll discover the journey of a passionate web developer and technology enthusiast. Learn about my background, expertise, and the milestones that shaped my career. I'll share my drive for creating captivating digital experiences and how I thrive in the ever-evolving world of web development. Let's connect and embark on this exciting tech adventure together!",
+};
 
 const AboutPage = async () => {
   const experiencesData = experienceService.getAll();
@@ -26,7 +31,7 @@ const AboutPage = async () => {
   return (
     <>
       <TransitionEffect />
-      <main className="flex w-full flex-col items-center justify-center dark:text-light">
+      <main className="flex w-full flex-col items-center justify-center dark:text-light max-w-[1800px] mx-auto">
         <Layout className="pt-16">
           <AnimatedText
             text="Passion Fuels Purpose!"
@@ -38,21 +43,31 @@ const AboutPage = async () => {
                 Biography
               </h2>
               <p className="font-medium">
-                Hi! I&apos;m Alyx, a web developer with a passion for creating
-                beautiful, functional, and user-centered digital experiences. I
-                am always looking for new and innovative ways to bring my
-                clients&apos; visions to life.
+                Hi! I&apos;m Alyx, a{" "}
+                <strong className="font-medium">Web Developer</strong>{" "}
+                specialized in{" "}
+                <strong className="font-medium">Front-End development</strong>{" "}
+                and expert of the
+                <strong className="font-medium">React.js ecosystem</strong>.
+              </p>
+              <p className="font-medium mt-4">
+                I have a passion for creating beautiful, functional, and
+                user-centered digital experiences. I am always looking for new
+                and innovative ways to bring my clients&apos; visions to life.
               </p>
               <p className="font-medium my-4">
-                I believe that design is about more than just making things look
-                pretty – it&apos;s about solving problems and creating
-                intuitive, enjoyable experiences for users.{" "}
+                I believe that <strong className="font-medium">design</strong>{" "}
+                is about more than just making things look pretty – it&apos;s
+                about solving problems and creating intuitive, enjoyable
+                experiences for users.{" "}
               </p>
               <p className="font-medium mb-4">
-                Whether I&apos;m working on a website, mobile app, or other
-                digital product, I bring my commitment to design excellence and
-                user-centered thinking to every project. I look forward to the
-                opportunity to bring my skills and passion to your next project.
+                Whether I&apos;m working on a{" "}
+                <strong className="font-medium">Website</strong>,{" "}
+                <strong className="font-medium">Mobile App</strong>, or other
+                <strong className="font-medium">digital product</strong>, I
+                bring my commitment to design excellence and user-centered
+                thinking to every project.
               </p>
               <p className="font-medium">
                 I look forward to the opportunity to bring my skills and passion
@@ -72,27 +87,27 @@ const AboutPage = async () => {
             <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl text-primary">
-                  <AnimatedNumbers value={50} />+
+                  <AnimatedNumbers value={2000} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  Satisfied clients
-                </h2>
+                <h3 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm xs:w-8">
+                  Coding hours
+                </h3>
               </div>
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl text-primary">
                   <AnimatedNumbers value={40} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
+                <h3 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   Projects completed
-                </h2>
+                </h3>
               </div>
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl text-primary">
                   <AnimatedNumbers value={2} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
+                <h3 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   Years of experience
-                </h2>
+                </h3>
               </div>
             </div>
           </div>

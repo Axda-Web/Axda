@@ -5,7 +5,6 @@ import { useScroll, motion } from "framer-motion";
 import { Education, Educations } from "@/types";
 import LiIcon from "../li-icon";
 
-
 const Details = ({
   type,
   time,
@@ -70,7 +69,7 @@ const Education = ({ educations }: EducationProps) => {
           style={{ scaleY: scrollYProgress }}
           className="absolute w-1 left-9 top-0 h-full bg-dark origin-top dark:bg-light md:w-0.5 md:left-[30px] xs:left-5"
         />
-        <ul className="space-y-8 w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
+        <ul className="space-y-12 w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           {educations.map(({ id, type, time, place, placeLink, info }) => (
             <Details
               key={id}

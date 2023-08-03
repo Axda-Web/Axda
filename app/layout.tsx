@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-light dark:bg-dark">
         <Script id="theme-switcher" strategy="beforeInteractive">
           {`if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark')
@@ -29,7 +29,7 @@ export default function RootLayout({
             document.documentElement.classList.remove('dark')
           }`}
         </Script>
-        <div className="bg-light dark:bg-dark w-full min-h-screen">
+        <div className="w-full min-h-screen">
           <Navbar />
           <AnimationWrapper>{children}</AnimationWrapper>
           <Footer />

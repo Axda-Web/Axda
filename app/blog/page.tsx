@@ -3,12 +3,16 @@ import AnimatedText from "../components/animated-text";
 import Link from "next/link";
 import TransitionEffect from "../components/transition-effect";
 import { Post } from "../../types";
-
 import AnimatedImage from "../components/animated-image";
 import Article from "../components/article";
-
 import postService from "@/services/posts";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Alyx DARENNE | Blog",
+  description:
+    "Unlock the world of web development through my insightful blog! Delve into a treasure trove of React/Next.js knowledge, best practices, and practical tips that will supercharge your frontend skills. Stay updated with the latest trends, tutorials, and industry insights as we explore the dynamic landscape of web development together. Whether you're a beginner or a seasoned pro, my blog is your go-to resource for all things React/Next.js. Let's embark on this enriching learning journey and master the art of building exceptional web experiences!",
+};
 
 const FeaturedArticle = ({
   img,
@@ -47,7 +51,7 @@ const BlogPage = async () => {
   return (
     <>
       <TransitionEffect />
-      <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light">
+      <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light max-w-[1800px] mx-auto">
         <Layout className="pt-16">
           <AnimatedText
             text="Words Can Change The World!"
