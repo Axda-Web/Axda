@@ -3,10 +3,16 @@ import AnimatedText from "../components/animated-text";
 import Link from "next/link";
 import { GithubIcon } from "../components/icons/Icons";
 import TransitionEffect from "../components/transition-effect";
-import { Project, Projects } from "@/types";
+import { Project } from "@/types";
 import AnimatedImage from "../components/animated-image";
-
 import projectService from "../../services/projects";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Alyx DARENNE | Projects",
+  description:
+    "Explore my diverse portfolio as a skilled web developer, showcasing a curated collection of projects that push boundaries and deliver seamless user experiences. From responsive designs to cutting-edge technologies, discover how I've crafted unique solutions for clients and companies across various industries. Dive into my work and witness the power of code in action.",
+};
 
 const Project = ({
   title,
@@ -119,7 +125,7 @@ const ProjectsPage = async () => {
   return (
     <>
       <TransitionEffect />
-      <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
+      <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light max-w-[1800px] mx-auto">
         <Layout className="pt-16">
           <AnimatedText
             text="Imagination Trumps Knowledge!"

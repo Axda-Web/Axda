@@ -74,7 +74,7 @@ const Experience = ({ experiences }: ExperiencesProps) => {
           style={{ scaleY: scrollYProgress }}
           className="absolute w-1 left-9 top-0 h-full bg-dark origin-top dark:bg-light md:w-0.5 md:left-[30px] xs:left-5"
         />
-        <ul className="space-y-8 w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
+        <ul className="space-y-12 w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           {experiences.map(
             ({ id, position, company, companyLink, time, address, work }) => (
               <Details
