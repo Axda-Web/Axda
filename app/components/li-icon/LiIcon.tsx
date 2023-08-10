@@ -7,11 +7,11 @@ type LiIconProps = {
 };
 
 const LiIcon = ({ reference }: LiIconProps) => {
-  const { scrollYProgress } = useScroll({
-    layoutEffect: false,
-    target: reference,
-    offset: ["center end", "center center"],
-  });
+  // const { scrollYProgress } = useScroll({
+  //   layoutEffect: false,
+  //   target: reference,
+  //   offset: ["center end", "center center"],
+  // });
   return (
     <figure className="absolute left-0 stroke-dark dark:stroke-light">
       <svg
@@ -27,9 +27,9 @@ const LiIcon = ({ reference }: LiIconProps) => {
           className="stroke-primary stroke-1 fill-none"
         />
         <motion.circle
-          style={{
-            pathLength: scrollYProgress,
-          }}
+          // style={{
+          //   pathLength: scrollYProgress,
+          // }}
           cx="75"
           cy="50"
           r="20"
