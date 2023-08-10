@@ -1,6 +1,6 @@
 import Layout from "./components/layout";
 import Image from "next/image";
-import profilePic from "../public/images/profile/hero-pic.png";
+import profilePic from "../public/images/profile/hero.png";
 import AnimatedText from "./components/animated-text";
 import Link from "next/link";
 import { LinkArrow } from "./components/icons/Icons";
@@ -44,9 +44,9 @@ export default function Home() {
                 <strong className="font-medium">
                   innovative web applications
                 </strong>
-                . Explore my latest projects and articles, showcasing my
+                . Explore my latest projects and articles, showcasing my{" "}
                 <strong className="font-medium">
-                  expertise in React.js and web development
+                  expertise in React.js and Web Development
                 </strong>
                 .
               </p>
