@@ -1,9 +1,9 @@
 import { PostsSchema } from "../models/zod-schemas";
 
-// const BASE_URL = "http://localhost:3000";
+const BASE_URL = `https://${process.env.VERCEL_URL}`;
 
 const getAll = async () => {
-  const res = await fetch(`/api/posts`);
+  const res = await fetch(`${BASE_URL}/api/posts`);
   const data = await res.json();
   return PostsSchema.parse(data);
 };
