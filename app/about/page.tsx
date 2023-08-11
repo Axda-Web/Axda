@@ -56,7 +56,7 @@ const AboutPage = async () => {
                 <strong className="font-medium">Web Developer</strong>{" "}
                 specialized in{" "}
                 <strong className="font-medium">Front-End development</strong>{" "}
-                and expert of the
+                and expert of the{" "}
                 <strong className="font-medium">React.js ecosystem</strong>.
               </p>
               <p className="font-medium mt-4">
