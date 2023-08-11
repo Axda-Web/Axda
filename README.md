@@ -4,9 +4,9 @@
 [![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white&style=flat-square)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white&style=flat-square)](https://www.typescriptlang.org/)
 [![Zod](https://img.shields.io/badge/Zod-E95950?logo=zod&logoColor=white&style=flat-square)](https://zod.sourceforge.io/)
-[![Prisma](https://img.shields.io/badge/Prisma-5.1.0-00C4B1?logo=prisma&logoColor=white&style=flat-square)](https://www.prisma.io/)
+[![Prisma](https://img.shields.io/badge/Prisma-00C4B1?logo=prisma&logoColor=white&style=flat-square)](https://www.prisma.io/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white&style=flat-square)](https://tailwindcss.com/)
-[![Framer Motion](https://img.shields.io/badge/Framer%20Motion-4.1.17-0055FF?logo=framer&logoColor=white&style=flat-square)](https://www.framer.com/api/motion/)
+[![Framer Motion](https://img.shields.io/badge/Framer%20Motion-0055FF?logo=framer&logoColor=white&style=flat-square)](https://www.framer.com/api/motion/)
 
 ![screenshot](/screenshot.jpg)
 
@@ -32,7 +32,6 @@ and more.
 - [Zod](https://github.com/colinhacks/zod) - Version 3.21.4
 - [Prisma](https://www.prisma.io/) - Version 5.1.0
 - [Tailwind CSS](https://tailwindcss.com) - Version 3.3.3
-- [Material UI](https://mui.com) (Pagination component) - Version 5.13.5
 - [Framer Motion](https://www.framer.com/api/motion/) - Version 10.15.0
 
 Credit to [CodeBucks](https://devdreaming.com/) for the design 🙌
