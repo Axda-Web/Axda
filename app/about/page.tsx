@@ -20,7 +20,7 @@ const prisma = new PrismaClient();
 export const metadata: Metadata = {
   title: "Alyx DARENNE | About me",
   description:
-    "Get to know the person behind the code! Welcome to my 'About Me' page, where you'll discover the journey of a passionate web developer and technology enthusiast. Learn about my background, expertise, and the milestones that shaped my career. I'll share my drive for creating captivating digital experiences and how I thrive in the ever-evolving world of web development. Let's connect and embark on this exciting tech adventure together!",
+    "Get to know the person behind the code! Welcome to my 'About Me' page, where you'll discover the journey of a passionate React Front-End developer and technology enthusiast. Learn about my background, expertise, and the milestones that shaped my career. I'll share my drive for creating captivating digital experiences and how I thrive in the ever-evolving world of web development. Let's connect and embark on this exciting tech adventure together!",
 };
 
 const AboutPage = async () => {
@@ -73,7 +73,7 @@ const AboutPage = async () => {
               <p className="font-medium mb-4">
                 Whether I&apos;m working on a{" "}
                 <strong className="font-medium">Website</strong>,{" "}
-                <strong className="font-medium">Mobile App</strong>, or other
+                <strong className="font-medium">Mobile App</strong>, or other{" "}
                 <strong className="font-medium">digital product</strong>, I
                 bring my commitment to design excellence and user-centered
                 thinking to every project.
