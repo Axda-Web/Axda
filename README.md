@@ -1,34 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Social B
 
-## Getting Started
+[![Next.js](https://img.shields.io/badge/Next.js-000000?logo=next.js&logoColor=white&style=flat-square)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white&style=flat-square)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white&style=flat-square)](https://www.typescriptlang.org/)
+[![Zod](https://img.shields.io/badge/Zod-E95950?logo=zod&logoColor=white&style=flat-square)](https://zod.sourceforge.io/)
+[![Prisma](https://img.shields.io/badge/Prisma-5.1.0-00C4B1?logo=prisma&logoColor=white&style=flat-square)](https://www.prisma.io/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white&style=flat-square)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer%20Motion-4.1.17-0055FF?logo=framer&logoColor=white&style=flat-square)](https://www.framer.com/api/motion/)
 
-First, run the development server:
+![screenshot](/screenshot.jpg)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Description
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Welcome to my portfolio project! This project showcases my work, skills, and accomplishments using a modern tech stack. By leveraging the power of Next.js, TypeScript, Zod, Prisma, TailwindCSS, and Framer Motion, this portfolio not only demonstrates my technical proficiency but also reflects my design sensibilities.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project explores various concepts and features including:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Interactive UI with smooth animations powered by Framer Motion.
+- Robust data validation and consistent schemas using Zod.
+- Efficient and secure data management with Prisma ORM.
+- Modern and responsive design facilitated by TailwindCSS.
+- Built with TypeScript for enhanced code quality and maintainability.
+- Deployed with Next.js, ensuring optimal performance and SEO.
 
-## Learn More
+and more.
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js](https://nextjs.org) - Version 13.4.12
+- [TypeScript](https://www.typescriptlang.org) - Version 5.1.6
+- [Zod](https://github.com/colinhacks/zod) - Version 3.21.4
+- [Prisma](https://www.prisma.io/) - Version 5.1.0
+- [Tailwind CSS](https://tailwindcss.com) - Version 3.3.3
+- [Material UI](https://mui.com) (Pagination component) - Version 5.13.5
+- [Framer Motion](https://www.framer.com/api/motion/) - Version 10.15.0
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Credit to [CodeBucks](https://devdreaming.com/) for the design 🙌
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+A deployed version of the Axda Portfolio project is available on Vercel at [Axda](https://axda.fr/).
