@@ -11,6 +11,7 @@ import AnimatedNumbers from "../components/animated-numbers/AnimatedNumbers";
 // import educationService from "../../services/educations";
 // import skillsService from "../../services/skills";
 import { Metadata } from "next";
+import { Experiences, Educations } from "@/types";
 
 import { PrismaClient } from "@prisma/client";
 
@@ -120,8 +121,8 @@ const AboutPage = async () => {
             </div>
           </div>
           <Skills skills={skills} />
-          <Experience experiences={experiences} />
-          <Education educations={educations} />
+          <Experience experiences={experiences as unknown as Experiences} />
+          <Education educations={educations as unknown as Educations} />
         </Layout>
       </main>
     </>
