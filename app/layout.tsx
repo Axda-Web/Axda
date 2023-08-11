@@ -8,7 +8,7 @@ import Footer from "./components/footer";
 import AnimationWrapper from "./components/animation-wrapper";
 
 const inter = Inter({ subsets: ["latin"] });
-const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
+const GTM_ID = "G-6ST1FRY4HP";
 
 export const metadata: Metadata = {
   title: "latest Next version",
