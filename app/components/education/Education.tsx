@@ -67,7 +67,7 @@ const Education = ({ educations }: EducationProps) => {
       >
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute w-1 left-9 top-0 h-full bg-dark origin-top dark:bg-light md:w-0.5 md:left-[30px] xs:left-5"
+          className="absolute w-1 left-[35px] top-0 h-full bg-dark origin-top dark:bg-light md:w-0.5 md:left-[30px] xs:left-[19px]"
         />
         <ul className="space-y-12 w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           {educations.map(({ id, type, time, place, placeLink, info }) => (
