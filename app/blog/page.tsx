@@ -15,7 +15,7 @@ const prisma = new PrismaClient();
 export const metadata: Metadata = {
   title: "Alyx DARENNE | Blog",
   description:
-    "Unlock the world of web development through my insightful blog! Delve into a treasure trove of React/Next.js knowledge, best practices, and practical tips that will supercharge your frontend skills. Stay updated with the latest trends, tutorials, and industry insights as we explore the dynamic landscape of web development together. Whether you're a beginner or a seasoned pro, my blog is your go-to resource for all things React/Next.js. Let's embark on this enriching learning journey and master the art of building exceptional web experiences!",
+    "Unlock the world of web development through my insightful blog! Delve into a treasure trove of React/Next.js knowledge, best practices, and practical tips that will supercharge your Front-End skills. Stay updated with the latest trends, tutorials, and industry insights as we explore the dynamic landscape of web development together. Whether you're a beginner or a seasoned pro, my blog is your go-to resource for all things React/Next.js. Let's embark on this enriching learning journey and master the art of building exceptional web experiences!",
 };
 
 const FeaturedArticle = ({

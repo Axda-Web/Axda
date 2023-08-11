@@ -11,7 +11,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Alyx DARENNE | Web Developer",
   description:
-    "Welcome to the world of captivating web experiences! As a skilled React/Next.js frontend developer, I specialize in crafting high-performance, user-centric websites that leave a lasting impression. Explore my portfolio of cutting-edge projects that blend seamless design with efficient functionality. Whether it's responsive interfaces, interactive components, or pixel-perfect layouts, I've got you covered. Join me on this journey of innovation and let's bring your digital vision to life!",
+    "Welcome to the world of captivating web experiences! As a skilled React Front-End Developer, I specialize in crafting high-performance, user-centric websites that leave a lasting impression. Explore my portfolio of cutting-edge projects that blend seamless design with efficient functionality. Whether it's responsive interfaces, interactive components, or pixel-perfect layouts, I've got you covered. Join me on this journey of innovation and let's bring your digital vision to life!",
 };
 
 export default function Home() {
@@ -38,7 +38,7 @@ export default function Home() {
               <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
                 As a{" "}
                 <strong className="font-medium">
-                  skilled Front-End developer
+                  skilled Front-End Developer
                 </strong>
                 , I am dedicated to turning ideas into{" "}
                 <strong className="font-medium">

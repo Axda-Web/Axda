@@ -15,7 +15,7 @@ const prisma = new PrismaClient();
 export const metadata: Metadata = {
   title: "Alyx DARENNE | Projects",
   description:
-    "Explore my diverse portfolio as a skilled web developer, showcasing a curated collection of projects that push boundaries and deliver seamless user experiences. From responsive designs to cutting-edge technologies, discover how I've crafted unique solutions for clients and companies across various industries. Dive into my work and witness the power of code in action.",
+    "Explore my diverse portfolio as a skilled React Front-End Developer, showcasing a curated collection of projects that push boundaries and deliver seamless user experiences. From responsive designs to cutting-edge technologies, discover how I've crafted unique solutions for clients and companies across various industries. Dive into my work and witness the power of code in action.",
 };
 
 const Project = ({
