@@ -2,16 +2,16 @@
    <xml version="1.0" encoding="UTF-8">
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
      <url>
-       <loc>http://www.axda.com</loc>
-       <lastmod>2023-03-08</lastmod>
+       <loc>https://axda.fr</loc>
+       <lastmod>2023-08-11</lastmod>
      </url>
      <url>
-       <loc>http://www.axda.com/about</loc>
-       <lastmod>2023-03-08</lastmod>
+       <loc>https://axda.fr/about</loc>
+       <lastmod>2023-08-11</lastmod>
      </url>
      <url>
-       <loc>http://www.axda.com/projects</loc>
-       <lastmod>2023-03-08</lastmod>
+       <loc>https://axda.fr/projects</loc>
+       <lastmod>2023-08-11</lastmod>
      </url>
    </urlset>
    </xml>
