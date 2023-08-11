@@ -7,10 +7,14 @@ import Experience from "../components/experience";
 import Education from "../components/education";
 import TransitionEffect from "../components/transition-effect";
 import AnimatedNumbers from "../components/animated-numbers/AnimatedNumbers";
-import experienceService from "../../services/experiences";
-import educationService from "../../services/educations";
-import skillsService from "../../services/skills";
+// import experienceService from "../../services/experiences";
+// import educationService from "../../services/educations";
+// import skillsService from "../../services/skills";
 import { Metadata } from "next";
+
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
 
 export const metadata: Metadata = {
   title: "Alyx DARENNE | About me",
@@ -19,9 +23,13 @@ export const metadata: Metadata = {
 };
 
 const AboutPage = async () => {
-  const experiencesData = experienceService.getAll();
-  const educationsData = educationService.getAll();
-  const skillsData = skillsService.getAll();
+  // const experiencesData = experienceService.getAll();
+  // const educationsData = educationService.getAll();
+  // const skillsData = skillsService.getAll();
+
+  const skillsData = prisma.skill.findMany();
+  const experiencesData = prisma.experience.findMany();
+  const educationsData = prisma.education.findMany();
 
   const [experiences, educations, skills] = await Promise.all([
     experiencesData,

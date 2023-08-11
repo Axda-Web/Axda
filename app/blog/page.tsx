@@ -8,6 +8,10 @@ import Article from "../components/article";
 import postService from "@/services/posts";
 import { Metadata } from "next";
 
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
+
 export const metadata: Metadata = {
   title: "Alyx DARENNE | Blog",
   description:
@@ -47,7 +51,8 @@ const FeaturedArticle = ({
   );
 };
 const BlogPage = async () => {
-  const posts = await postService.getAll();
+  // const posts = await postService.getAll();
+  const posts = await prisma.post.findMany();
   return (
     <>
       <TransitionEffect />

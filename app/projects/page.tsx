@@ -8,6 +8,10 @@ import AnimatedImage from "../components/animated-image";
 import projectService from "../../services/projects";
 import { Metadata } from "next";
 
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
+
 export const metadata: Metadata = {
   title: "Alyx DARENNE | Projects",
   description:
@@ -121,7 +125,12 @@ const FeaturedProject = ({
 };
 
 const ProjectsPage = async () => {
-  const projects = await projectService.getAll();
+  // const projects = await projectService.getAll();
+  const projects = await prisma.project.findMany({
+    orderBy: {
+      id: "asc",
+    },
+  });
   return (
     <>
       <TransitionEffect />
