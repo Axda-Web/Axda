@@ -1,4 +1,4 @@
-# Social B
+# Axda Portfolio
 
 [![Next.js](https://img.shields.io/badge/Next.js-000000?logo=next.js&logoColor=white&style=flat-square)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white&style=flat-square)](https://reactjs.org/)
