@@ -123,7 +123,7 @@ const Navbar = () => {
             <CustomLink key={id} url={url} title={title} />
           ))}
         </nav>
-        <nav className="flex justify-between items-center gap-x-6">
+        <div className="flex justify-between items-center gap-x-6">
           <motion.a
             href="https://www.linkedin.com/in/alyx-darenne/"
             target="_blank"
@@ -164,7 +164,7 @@ const Navbar = () => {
               <MoonIcon className="fill-dark" />
             )}
           </button>
-        </nav>
+        </div>
       </div>
       {isOpen && (
         <motion.div
@@ -182,7 +182,7 @@ const Navbar = () => {
               />
             ))}
           </nav>
-          <nav className="flex justify-between items-center gap-x-6">
+          <div className="flex justify-between items-center gap-x-6">
             <motion.a
               href="https://www.linkedin.com/in/alyx-darenne/"
               target="_blank"
@@ -210,7 +210,7 @@ const Navbar = () => {
             >
               <FrontendMentorIcon />
             </motion.a>
-          </nav>
+          </div>
           <button
             // @ts-ignore
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
