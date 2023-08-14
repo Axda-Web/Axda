@@ -42,7 +42,7 @@ export default function Home() {
                 </strong>
                 , I am dedicated to turning ideas into{" "}
                 <strong className="font-medium">
-                  innovative web applications
+                  innovative Web Applications
                 </strong>
                 . Explore my latest projects and articles, showcasing my{" "}
                 <strong className="font-medium">
