@@ -10,6 +10,8 @@ import {
   ExperiencesSchema,
   SkillSchema,
   SkillsSchema,
+  NavLinkSchema,
+  NavLinksSchema,
 } from "./models/zod-schemas";
 
 type Project = z.infer<typeof ProjectSchema>;
@@ -26,3 +28,6 @@ type Experiences = z.infer<typeof ExperiencesSchema>;
 
 type Skill = z.infer<typeof SkillSchema>;
 type Skills = z.infer<typeof SkillsSchema>;
+
+type NavLink = z.infer<typeof NavLinkSchema>;
+type NavLinks = z.infer<typeof NavLinksSchema>;

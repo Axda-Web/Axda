@@ -100,7 +100,7 @@ const FeaturedProject = ({
           href={link}
           target="_blank"
         >
-          <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light sm:text-sm capitalize">
+          <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light lg:text-2xl">
             {title}
           </h2>
         </Link>

@@ -67,3 +67,11 @@ export const SkillSchema = z.object({
 });
 
 export const SkillsSchema = z.array(SkillSchema);
+
+export const NavLinkSchema = z.object({
+  id: z.number(),
+  url: z.string(),
+  title: z.string(),
+});
+
+export const NavLinksSchema = z.array(NavLinkSchema);
