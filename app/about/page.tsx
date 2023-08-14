@@ -56,16 +56,16 @@ const AboutPage = async () => {
                 <strong className="font-medium">Web Developer</strong>{" "}
                 specialized in{" "}
                 <strong className="font-medium">Front-End development</strong>{" "}
-                and expert of the{" "}
+                and an expert of the{" "}
                 <strong className="font-medium">React.js ecosystem</strong>.
               </p>
               <p className="font-medium mt-4">
                 I have a passion for creating beautiful, functional, and
-                user-centered digital experiences. I am always looking for new
+                user-centered digital-experiences. I am always looking for new
                 and innovative ways to bring my clients&apos; visions to life.
               </p>
               <p className="font-medium my-4">
-                I believe that <strong className="font-medium">design</strong>{" "}
+                I believe that <strong className="font-medium">Design</strong>{" "}
                 is about more than just making things look pretty – it&apos;s
                 about solving problems and creating intuitive, enjoyable
                 experiences for users.{" "}
