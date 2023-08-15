@@ -56,7 +56,7 @@ const AboutPage = async () => {
                 <strong className="font-medium">Web Developer</strong>{" "}
                 specialized in{" "}
                 <strong className="font-medium">Front-End development</strong>{" "}
-                and an expert of the{" "}
+                and an expert in the{" "}
                 <strong className="font-medium">React.js ecosystem</strong>.
               </p>
               <p className="font-medium mt-4">
@@ -79,8 +79,8 @@ const AboutPage = async () => {
                 thinking to every project.
               </p>
               <p className="font-medium">
-                I look forward to the opportunity to bring my skills and passion
-                to your next project.
+                I look forward to having the opportunity to bring my skills and
+                passion to your next project.
               </p>
             </div>
             <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark dark:border-light bg-light dark:bg-dark p-8 xl:col-span-4 md:order-1 md:col-span-8">

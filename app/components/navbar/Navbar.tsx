@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import useThemeSwitcher from "../hooks/useThemeSwitcher";
 import Logo from "../logo";
 import { SunIcon, MoonIcon } from "../icons/Icons";
-import MobileMenu from "../mobile-menu/MobileMenu";
+import MobileMenu from "../mobile-menu";
 import type { NavLink, NavLinks } from "@/types";
 
 const navLinks: NavLink[] = [

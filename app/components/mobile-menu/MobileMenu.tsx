@@ -153,3 +153,5 @@ const MobileMenu = ({ navLinks, mode, setMode }: MobileMenuProps) => {
   );
 };
 export default MobileMenu;
+
+// TODO: Check Light mode icon bug on iPhone

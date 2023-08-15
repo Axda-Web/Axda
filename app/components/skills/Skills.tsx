@@ -55,3 +55,5 @@ const Skills = ({ skills }: SkillsProps) => {
   );
 };
 export default Skills;
+
+// TODO: Find a more esthetic way to display the skills
