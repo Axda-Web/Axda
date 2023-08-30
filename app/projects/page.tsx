@@ -134,7 +134,7 @@ const ProjectsPage = async () => {
   return (
     <>
       <TransitionEffect />
-      <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light max-w-[1800px] mx-auto">
+      <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light max-w-[1440px] mx-auto">
         <Layout className="pt-16">
           <AnimatedText
             text="Imagination Trumps Knowledge!"
