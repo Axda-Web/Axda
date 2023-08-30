@@ -19,7 +19,7 @@ export default function Home() {
     <>
       {/* TODO: Center Hero section on mobile */}
       <TransitionEffect />
-      <main className="flex text-dark dark:text-light w-full min-h-screen items-center max-w-[1800px] mx-auto">
+      <main className="flex text-dark dark:text-light w-full min-h-screen items-center max-w-[1440px] mx-auto">
         <Layout className="pt-0 md:p-16 sm:pt-8">
           <div className="flex items-center lg:items-start justify-between w-full lg:flex-col sm:gap-y-10">
             <div className="w-1/2 md:w-full">

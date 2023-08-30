@@ -29,7 +29,11 @@ const AboutPage = async () => {
   // const skillsData = skillsService.getAll();
 
   const skillsData = prisma.skill.findMany();
-  const experiencesData = prisma.experience.findMany();
+  const experiencesData = prisma.experience.findMany({
+    orderBy: {
+      id: "asc",
+    },
+  });
   const educationsData = prisma.education.findMany();
 
   const [experiences, educations, skills] = await Promise.all([
@@ -40,7 +44,7 @@ const AboutPage = async () => {
   return (
     <>
       <TransitionEffect />
-      <main className="flex w-full flex-col items-center justify-center dark:text-light max-w-[1800px] mx-auto">
+      <main className="flex w-full flex-col items-center justify-center dark:text-light max-w-[1440px] mx-auto">
         <Layout className="pt-16">
           <AnimatedText
             text="Passion Fuels Purpose!"
