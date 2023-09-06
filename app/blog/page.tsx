@@ -52,12 +52,12 @@ const FeaturedArticle = ({
 };
 const BlogPage = async () => {
   // const posts = await postService.getAll();
-  const posts = await prisma.post.findMany();
+  // const posts = await prisma.post.findMany();
   return (
     <>
       <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light max-w-[1440px] mx-auto">
-        <Layout className="pt-16">
+        {/* <Layout className="pt-16">
           <AnimatedText
             text="Words Can Change The World!"
             className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
@@ -79,7 +79,7 @@ const BlogPage = async () => {
                 <Article key={article.id} {...article} />
               ))}
           </ul>
-        </Layout>
+        </Layout> */}
       </main>
     </>
   );

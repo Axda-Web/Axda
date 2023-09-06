@@ -5,11 +5,8 @@ import profilePic from "../../public/images/profile/about-pic.jpg";
 import Skills from "../components/skills";
 import Experience from "../components/experience";
 import Education from "../components/education";
+import AnimatedBlock from "../components/animated-block";
 import TransitionEffect from "../components/transition-effect";
-import AnimatedNumbers from "../components/animated-numbers/AnimatedNumbers";
-// import experienceService from "../../services/experiences";
-// import educationService from "../../services/educations";
-// import skillsService from "../../services/skills";
 import { Metadata } from "next";
 import { Experiences, Educations } from "@/types";
 
@@ -24,23 +21,25 @@ export const metadata: Metadata = {
 };
 
 const AboutPage = async () => {
-  // const experiencesData = experienceService.getAll();
-  // const educationsData = educationService.getAll();
-  // const skillsData = skillsService.getAll();
-
-  const skillsData = prisma.skill.findMany();
-  const experiencesData = prisma.experience.findMany({
-    orderBy: {
-      id: "asc",
-    },
-  });
-  const educationsData = prisma.education.findMany();
-
-  const [experiences, educations, skills] = await Promise.all([
-    experiencesData,
-    educationsData,
-    skillsData,
+  const [experiences, educations] = await prisma.$transaction([
+    prisma.experience.findMany({
+      orderBy: {
+        id: "desc",
+      },
+      include: {
+        work: true,
+      },
+    }),
+    prisma.education.findMany({
+      orderBy: {
+        id: "desc",
+      },
+      include: {
+        info: true,
+      },
+    }),
   ]);
+
   return (
     <>
       <TransitionEffect />
@@ -50,44 +49,8 @@ const AboutPage = async () => {
             text="Passion Fuels Purpose!"
             className="mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
           />
-          <div className="grid grid-cols-8 gap-16 sm:gap-8 w-full">
-            <div className="col-span-3 xl:col-span-4 flex flex-col items-start justify-start md:order-2 md:col-span-8">
-              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
-                Biography
-              </h2>
-              <p className="font-medium">
-                Hi! I&apos;m Alyx, a{" "}
-                <strong className="font-medium">Web Developer</strong>{" "}
-                specialized in{" "}
-                <strong className="font-medium">Front-End development</strong>{" "}
-                and an expert in the{" "}
-                <strong className="font-medium">React.js ecosystem</strong>.
-              </p>
-              <p className="font-medium mt-4">
-                I have a passion for creating beautiful, functional, and
-                user-centered digital-experiences. I am always looking for new
-                and innovative ways to bring my clients&apos; visions to life.
-              </p>
-              <p className="font-medium my-4">
-                I believe that <strong className="font-medium">Design</strong>{" "}
-                is about more than just making things look pretty – it&apos;s
-                about solving problems and creating intuitive, enjoyable
-                experiences for users.{" "}
-              </p>
-              <p className="font-medium mb-4">
-                Whether I&apos;m working on a{" "}
-                <strong className="font-medium">Website</strong>,{" "}
-                <strong className="font-medium">Mobile App</strong>, or other{" "}
-                <strong className="font-medium">digital product</strong>, I
-                bring my commitment to design excellence and user-centered
-                thinking to every project.
-              </p>
-              <p className="font-medium">
-                I look forward to having the opportunity to bring my skills and
-                passion to your next project.
-              </p>
-            </div>
-            <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark dark:border-light bg-light dark:bg-dark p-8 xl:col-span-4 md:order-1 md:col-span-8">
+          <div className="">
+            <div className="relative max-w-sm sm:max-w-xs rounded-2xl border-2 border-solid border-dark dark:border-light bg-light dark:bg-dark p-8 mx-auto my-16">
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light" />
               <Image
                 src={profilePic}
@@ -97,34 +60,33 @@ const AboutPage = async () => {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
-            <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
-              <div className="flex flex-col items-end justify-center xl:items-center">
-                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl text-primary">
-                  <AnimatedNumbers value={2000} />+
-                </span>
-                <h3 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm xs:w-8">
-                  Coding hours
-                </h3>
+            <AnimatedBlock>
+              <div className="flex flex-col items-center text-center text-2xl sm:text-xl max-w-4xl mx-auto gap-y-6 sm:gap-y-2">
+                <p className="font-medium">
+                  Hi! I&apos;m Alyx,{" "}
+                  <strong className="font-medium">Web Developer</strong> expert
+                  in the{" "}
+                  <strong className="font-medium">React.js ecosystem</strong>.
+                </p>
+                <p className="font-medium mt-4">
+                  I have a passion for creating beautiful, functional, and
+                  user-centered digital-experiences.
+                </p>
+                <p className="font-medium my-4">
+                  I believe that <strong className="font-medium">Design</strong>{" "}
+                  is about more than just making things look pretty. It&apos;s
+                  about solving problems and creating intuitive, enjoyable
+                  experiences for users.{" "}
+                </p>
+
+                <p className="font-medium">
+                  I look forward to having the opportunity to bring my skills
+                  and passion to your next project.
+                </p>
               </div>
-              <div className="flex flex-col items-end justify-center xl:items-center">
-                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl text-primary">
-                  <AnimatedNumbers value={15} />+
-                </span>
-                <h3 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  Projects completed
-                </h3>
-              </div>
-              <div className="flex flex-col items-end justify-center xl:items-center">
-                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl text-primary">
-                  <AnimatedNumbers value={2} />+
-                </span>
-                <h3 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  Years of experience
-                </h3>
-              </div>
-            </div>
+            </AnimatedBlock>
           </div>
-          <Skills skills={skills} />
+          <Skills />
           <Experience experiences={experiences as unknown as Experiences} />
           <Education educations={educations as unknown as Educations} />
         </Layout>
