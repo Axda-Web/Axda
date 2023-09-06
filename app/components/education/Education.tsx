@@ -17,7 +17,7 @@ const Details = ({
   return (
     <li
       ref={ref}
-      className="w-7/12 md:w-4/5 mx-auto flex flex-col justify-between"
+      className="w-11/12 md:w-4/5 mx-auto flex flex-col justify-between"
     >
       <LiIcon reference={ref} />
       <motion.div
@@ -36,8 +36,8 @@ const Details = ({
         </span>
         <ul className="font-medium w-full md:text-sm mt-4 space-y-1 sm:space-y-2">
           {info?.map(({ id, description }) => (
-            <li className="list-disc sm:list-none list-inside ml-0" key={id}>
-              {description}
+            <li className="list-disc md:list-none list-inside ml-0" key={id}>
+              {description}.
             </li>
           ))}
         </ul>
@@ -57,7 +57,7 @@ const Education = ({ educations }: EducationProps) => {
     offset: ["start end", "center start"],
   });
   return (
-    <div className="my-64 ">
+    <div className="my-64 md:my-32">
       <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
         Education
       </h2>
@@ -67,9 +67,9 @@ const Education = ({ educations }: EducationProps) => {
       >
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute w-1 left-[35px] top-0 h-full bg-dark origin-top dark:bg-light md:w-0.5 md:left-[30px] xs:left-[19px]"
+          className="absolute w-1 left-0 top-0 h-full bg-dark origin-top dark:bg-light md:w-0.5 md:left-[30px] xs:left-[19px]"
         />
-        <ul className="space-y-12 w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
+        <ul className="space-y-12 w-full flex flex-col items-start justify-between ml-24 lg:ml-2">
           {educations.map(({ id, type, time, place, placeLink, info }) => (
             <Details
               key={id}
