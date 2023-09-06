@@ -56,9 +56,9 @@ const CustomLink = ({ url, title, className = "" }: CustomLink) => {
 const Navbar = () => {
   const [mode, setMode] = useThemeSwitcher();
   return (
-    <header className="w-full px-32 py-8 font-medium flex justify-between lg:justify-end dark:text-light z-10 lg:px-16 md:px-12 sm:px-8">
+    <header className="w-full px-32 py-8 font-medium flex justify-between lg:justify-end dark:text-light z-10 lg:px-16 md:px-12 sm:px-8 max-w-[1440px] mx-auto">
       <MobileMenu navLinks={navLinks} mode={mode} setMode={setMode} />
-      <div className="w-full flex items-center justify-between lg:hidden max-w-[1440px] mx-auto">
+      <div className="w-full flex items-center justify-between lg:hidden mx-auto">
         <nav className="space-x-8">
           {navLinks.map(({ id, url, title }: NavLink) => (
             <CustomLink key={id} url={url} title={title} />
