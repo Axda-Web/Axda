@@ -11,8 +11,10 @@ datasource db {
 }
 
 model Project {
-  id          Int     @id @default(autoincrement())
-  title       String  @unique
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  title       String   @unique
   description String
   img         String
   link        String
@@ -20,40 +22,59 @@ model Project {
   featured    Boolean
 }
 
+model Description {
+  id           Int         @id @default(autoincrement())
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  description  String
+  Experience   Experience? @relation(fields: [experienceId], references: [id])
+  experienceId Int?
+  Education    Education?  @relation(fields: [educationId], references: [id])
+  educationId  Int?
+}
+
 model Experience {
-  id          Int    @id @default(autoincrement())
+  id          Int           @id @default(autoincrement())
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
   position    String
   company     String
   companyLink String
   time        String
   address     String
-  work        Json[]
+  work        Description[]
 }
 
 model Education {
-  id        Int    @id @default(autoincrement())
+  id        Int           @id @default(autoincrement())
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
   type      String
   place     String
   placeLink String
   time      String
-  info      Json[]
+  info      Description[]
 }
 
 model Post {
-  id       Int     @id @default(autoincrement())
-  title    String  @unique
-  summary  String
-  content  String
-  img      String
-  link     String
-  date     String
-  time     String
-  featured Boolean
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  title     String   @unique
+  summary   String
+  content   String
+  img       String
+  link      String
+  date      String
+  time      String
+  featured  Boolean
 }
 
 model Skill {
-  id   Int    @id @default(autoincrement())
-  name String @unique
-  x    String
-  y    String
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  name      String   @unique
+  x         String
+  y         String
 }
