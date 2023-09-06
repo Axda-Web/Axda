@@ -12,8 +12,8 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="w-full border-t-2 border-solid border-light text-light font-medium text-lg sm:text-base bg-dark">
-      <Layout className="py-8 flex items-center justify-between lg:flex-col lg:py-6 lg:gap-y-6 max-w-[1800px] mx-auto">
+    <footer className="w-full border-t-2 border-solid border-light text-light font-medium text-base bg-dark">
+      <Layout className="py-8 flex items-center justify-between lg:flex-col lg:py-6 lg:gap-y-6 max-w-[1440px] mx-auto">
         <span>{new Date().getFullYear()} &copy; All rights reserved.</span>
         <div className="flex items-baseline gap-x-2">
           <div>Build with</div>

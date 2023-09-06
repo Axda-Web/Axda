@@ -128,7 +128,7 @@ const ProjectsPage = async () => {
   // const projects = await projectService.getAll();
   const projects = await prisma.project.findMany({
     orderBy: {
-      id: "asc",
+      id: "desc",
     },
   });
   return (

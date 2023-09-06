@@ -19,6 +19,7 @@ import {
   SunIcon,
   MoonIcon,
 } from "../icons/Icons";
+import { IoMdClose } from "react-icons/io";
 import { Dispatch, SetStateAction } from "react";
 
 const CustomMobileLink = ({
@@ -92,7 +93,11 @@ const MobileMenu = ({ navLinks, mode, setMode }: MobileMenuProps) => {
       <Drawer isOpen={isOpen} onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent className="bg-dark/90 dark:bg-light/75 backdrop-blur-md">
-          <DrawerCloseButton className="w-fit absolute top-8 right-8 stroke-white dark:stroke-0" />
+          <div className="flex justify-end p-6">
+            <button onClick={onClose}>
+              <IoMdClose className="text-4xl text-light dark:text-dark" />
+            </button>
+          </div>
           <DrawerBody className="flex flex-col justify-center items-center h-full gap-y-12">
             <nav className="flex items-center flex-col justify-center flex-wrap mt-2">
               {navLinks.map(({ id, url, title }) => (

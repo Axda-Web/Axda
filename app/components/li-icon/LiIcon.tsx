@@ -13,7 +13,7 @@ const LiIcon = ({ reference }: LiIconProps) => {
   //   offset: ["center end", "center center"],
   // });
   return (
-    <figure className="absolute left-0 stroke-dark dark:stroke-light">
+    <figure className="absolute -left-[35px] md:left-0 stroke-dark dark:stroke-light">
       <svg
         className="-rotate-[92deg] md:w-[60px] md:h-[60px] xs:w-10 xs:h-10"
         width="75"
