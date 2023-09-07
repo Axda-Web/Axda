@@ -45,7 +45,14 @@ export default function Home() {
                 <strong className="font-medium">
                   innovative Web Applications
                 </strong>
-                . Explore my latest projects and articles, showcasing my{" "}
+                . Explore my latest projects and{" "}
+                <span
+                  className="cursor-help"
+                  title="Blog section is comming soon."
+                >
+                  articles*
+                </span>
+                , showcasing my{" "}
                 <strong className="font-medium">
                   expertise in React.js and Web Development
                 </strong>

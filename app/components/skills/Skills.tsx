@@ -58,7 +58,7 @@ const Skills = () => {
         className="grid grid-cols-5 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-14"
       >
         <div>
-          <h3 className="font-bold text-xl mb-4 border-b-4 py-2 border-b-dark dark:border-b-light">
+          <h3 className="font-bold text-xl mb-6 border-b-4 py-2 border-b-dark dark:border-b-light">
             Front-End
           </h3>
           <ul className="space-y-3">
@@ -93,7 +93,7 @@ const Skills = () => {
           </ul>
         </div>
         <div>
-          <h3 className="font-bold text-xl mb-4 border-b-4 py-2 border-b-dark dark:border-b-light">
+          <h3 className="font-bold text-xl mb-6 border-b-4 py-2 border-b-dark dark:border-b-light">
             Styling
           </h3>
           <ul className="space-y-3">
@@ -120,7 +120,7 @@ const Skills = () => {
           </ul>
         </div>
         <div>
-          <h3 className="font-bold text-xl mb-4 border-b-4 py-2 border-b-dark dark:border-b-light">
+          <h3 className="font-bold text-xl mb-6 border-b-4 py-2 border-b-dark dark:border-b-light">
             Testing
           </h3>
           <ul className="space-y-4">
@@ -139,7 +139,7 @@ const Skills = () => {
           </ul>
         </div>
         <div>
-          <h3 className="font-bold text-xl mb-4 border-b-4 py-2 border-b-dark dark:border-b-light">
+          <h3 className="font-bold text-xl mb-6 border-b-4 py-2 border-b-dark dark:border-b-light">
             Back-End
           </h3>
           <ul className="space-y-3">
@@ -174,7 +174,7 @@ const Skills = () => {
           </ul>
         </div>
         <div>
-          <h3 className="font-bold text-xl mb-4 border-b-4 py-2 border-b-dark dark:border-b-light">
+          <h3 className="font-bold text-xl mb-6 border-b-4 py-2 border-b-dark dark:border-b-light">
             Tools
           </h3>
           <ul className="space-y-3">
