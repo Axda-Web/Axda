@@ -9,9 +9,15 @@ import AnimatedBlock from "../components/animated-block";
 import TransitionEffect from "../components/transition-effect";
 import { Metadata } from "next";
 import { Experiences, Educations } from "@/types";
+import { Shadows_Into_Light } from "next/font/google";
 
 import { PrismaClient } from "@prisma/client";
 
+const shadows = Shadows_Into_Light({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-shadows",
+});
 const prisma = new PrismaClient();
 
 export const metadata: Metadata = {
@@ -61,18 +67,20 @@ const AboutPage = async () => {
               />
             </div>
             <AnimatedBlock>
-              <div className="flex flex-col items-center text-center text-2xl sm:text-xl max-w-4xl mx-auto gap-y-6 sm:gap-y-2">
+              <div
+                className={`flex flex-col items-center text-center text-2xl sm:text-xl max-w-4xl mx-auto gap-y-6 sm:gap-y-4 ${shadows.variable} font-cursive`}
+              >
                 <p className="font-medium">
                   Hi! I&apos;m Alyx,{" "}
                   <strong className="font-medium">Web Developer</strong> expert
                   in the{" "}
                   <strong className="font-medium">React.js ecosystem</strong>.
                 </p>
-                <p className="font-medium mt-4">
+                <p className="font-medium">
                   I have a passion for creating beautiful, functional, and
                   user-centered digital-experiences.
                 </p>
-                <p className="font-medium my-4">
+                <p className="font-medium">
                   I believe that <strong className="font-medium">Design</strong>{" "}
                   is about more than just making things look pretty. It&apos;s
                   about solving problems and creating intuitive, enjoyable
