@@ -34,7 +34,7 @@ const Details = ({
             @{place}
           </a>
         </span>
-        <ul className="font-medium w-full md:text-sm mt-4 space-y-1 sm:space-y-2">
+        <ul className="font-light w-full md:text-sm mt-4 space-y-1 sm:space-y-2">
           {info?.map(({ id, description }) => (
             <li className="list-disc md:list-none list-inside ml-0" key={id}>
               {description}.
