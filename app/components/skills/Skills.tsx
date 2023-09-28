@@ -32,6 +32,7 @@ import {
   PrismaIcon,
   CypressIcon,
   RestApiIcon,
+  SanityIcon,
 } from "../icons/Icons";
 
 const Skills = () => {
@@ -150,6 +151,10 @@ const Skills = () => {
             <li className="flex items-center gap-x-2">
               <GraphqlIcon className="w-6 h-6 fill-dark dark:fill-light" />
               GraphQL
+            </li>
+            <li className="flex items-center gap-x-2">
+              <SanityIcon className="w-6 h-6 fill-dark dark:fill-light" />
+              Sanity
             </li>
             <li className="flex items-center gap-x-2">
               <NodejsIcon className="w-6 h-6 fill-dark dark:fill-light" />
